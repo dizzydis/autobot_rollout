@@ -2,7 +2,7 @@
 Manage sending the Autumn-aton to a place of your choice!
 
 # Installation
-`git checkout <url> main`
+`git checkout https://github.com/dizzydis/autobot_rollout main`
 
 # Config
 The script checks if the autumn-aton is available in the inventory. 
