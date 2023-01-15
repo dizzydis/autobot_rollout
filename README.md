@@ -26,3 +26,8 @@ Update the following setting in Mafia to be enabled/checked:
 `General -> Preferences -> Look & Feel -> Relay Browser -> Run betweenBattleScript before manual adventures`  
 
 With this setting enabled, the Pre-Adventure script will now also trigger when manually adventuring using the Relay Browser.
+
+## Potential Problems
+If Mafia thinks that your Fallbot is out on an adventure, but you still have the Fallbut in your inventory, you might need to run:  
+`set autumnatonQuestLocation =`
+to reset the question location.
