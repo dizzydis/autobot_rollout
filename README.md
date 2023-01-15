@@ -29,5 +29,5 @@ With this setting enabled, the Pre-Adventure script will now also trigger when m
 
 ## Potential Problems
 If Mafia thinks that your Fallbot is out on an adventure, but you still have the Fallbut in your inventory, you might need to run:  
-`set autumnatonQuestLocation =`
+`set autumnatonQuestLocation =`  
 to reset the question location.
