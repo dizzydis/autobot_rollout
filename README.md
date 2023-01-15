@@ -28,6 +28,8 @@ Update the following setting in Mafia to be enabled/checked:
 With this setting enabled, the Pre-Adventure script will now also trigger when manually adventuring using the Relay Browser.
 
 ## Potential Problems
-If Mafia thinks that your Fallbot is out on an adventure, but you still have the Fallbut in your inventory, you might need to run:  
+If Mafia thinks that your Autumn-aton is out on an Expidition, but you still have the Autumn-aton in your inventory, the script will never actually send the Autumn-aton.
+
+To fix this, you can try running the following command in the Mafia gCLI:  
 `set autumnatonQuestLocation =`  
-to reset the question location.
+to reset the Autumn-aton's quest location.
