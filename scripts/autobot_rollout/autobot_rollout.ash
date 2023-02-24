@@ -5,7 +5,7 @@ void initAutobotPrefrefs(){
     pref_default_map["autobot_rolled_out"] = false;
     pref_default_map["autobot_exp_destination"] = "The Oasis";
    
-    foreach pref in pref_map {
+    foreach pref in pref_default_map {
         if ( get_property(pref) == "" ) {
             set_property(pref, pref_default_map[pref]);
         }
@@ -13,7 +13,7 @@ void initAutobotPrefrefs(){
 }
 
 boolean isAutobotRolledOut() {
-    isRolledOut = false;
+    boolean isRolledOut = false;
 
     if ( item_amount( $item[autumn-aton] ) > 0 ) {
         isRolledOut = false;
