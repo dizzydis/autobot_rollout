@@ -1,6 +1,34 @@
-string fallbot_status = cli_execute_output("autumnaton");
+void initAutobotPrefrefs(){
+    string [string] pref_default_map;
+   
+    pref_default_map["autobot_mode"] = "aftercore";
+    pref_default_map["autobot_rolled_out"] = false;
+    pref_default_map["autobot_exp_destination"] = "The Oasis";
+   
+    foreach pref in pref_map {
+        if ( get_property(pref) == "" ) {
+            set_property(pref, pref_default_map[pref]);
+        }
+    }
+}
+
+boolean isAutobotRolledOut() {
+    isRolledOut = false;
+
+    if ( item_amount( $item[autumn-aton] ) > 0 ) {
+        isRolledOut = false;
+    }
+    else {
+        isRolledOut = true;
+    }
+
+    return isRolledOut;
+}
+
+initAutobotPrefrefs();
+
 # Check if autumnaton is available
-if ( ! contains_text(fallbot_status,"will return after") ) {
+if ( isAutobotRolledOut() ) {
 
     #Check how many advs the next expedition will take
     int questsDone = to_int( get_property("_autumnatonQuests") );
@@ -27,12 +55,9 @@ if ( ! contains_text(fallbot_status,"will return after") ) {
 
     int nextExpCount = 11 * normalizedQuestsDone;
     int remainingAdvs = my_adventures();
-    #print("We have autumnaton.");
-    #print("We have used it "+to_string(questsDone)+" times.");
-    #print("We have applied "+legUpgradesCount+" leg upgrades to the autumnaton.");
-    #print("Next expedition will take "+to_string(nextExpCount)+" adventures");
+
     if ( nextExpCount < remainingAdvs ) {
-        cli_execute("autumnaton send \"The Oasis\"");
+        cli_execute("autumnaton send" + get_property("autobot_exp_destination"));
     }
 
 }
