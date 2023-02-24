@@ -7,8 +7,8 @@ Manage sending the Autumn-aton to a place of your choice!
 ## Important Note:
 A recent change put the script into its own subdirectory for better organization and segregation from other Mafia scripts.
 
-As such, doing a git update doesn't remove the old version of the script. It can be deleted.
-Also, since Autobot Rollout doesn't manage any Mafia Automation Settings - if you don't update the Pre-Adventure setting, and you don't remove the old version of the script (the one that **isn't** in its own subdirectory), then doing a git update will never result in you running any changes that have been implemented since the script move.
+As such, doing a `git update` may not remove the old version of the script. If not, it is safe to be deleted.
+Also, since Autobot Rollout doesn't manage any Mafia Automation Settings - if you don't update the Pre-Adventure setting, and the old version of the script (the one that **isn't** in its own subdirectory) hasn't been removed, then doing a git update will never result in you running any changes that have been implemented since the script move.
 
 To fix this, just make sure you update the Pre-Adventure setting to whatever is listed in this guide.
 Cleaning up the old script isn't necessary, but may be preferrable to keep a clean UI in Mafia.
