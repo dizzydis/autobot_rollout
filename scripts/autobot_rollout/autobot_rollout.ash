@@ -16,13 +16,15 @@ boolean isAutobotRolledOut() {
     boolean isRolledOut = false;
 
     if ( item_amount( $item[autumn-aton] ) > 0 ) {
-        isRolledOut = false;
+        #isRolledOut = false;
+        set_property("autobot_rolled_out", false);
     }
     else {
-        isRolledOut = true;
+        #isRolledOut = true;
+        set_property("autobot_rolled_out", true);
     }
 
-    return isRolledOut;
+    return get_property("autobot_rolled_out");
 }
 
 initAutobotPrefrefs();
