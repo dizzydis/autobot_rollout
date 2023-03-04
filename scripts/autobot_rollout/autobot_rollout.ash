@@ -1,4 +1,5 @@
 void initAutobotPrefrefs(){
+    print("Making sure Autobot Prefs are set!");
     string [string] pref_default_map;
    
     pref_default_map["autobot_mode"] = "aftercore";
@@ -13,6 +14,7 @@ void initAutobotPrefrefs(){
 }
 
 boolean isAutobotRolledOut() {
+    print("Checking to see if Autobot has already rolled out!);
     boolean isRolledOut = false;
 
     if ( item_amount( $item[autumn-aton] ) > 0 ) {
@@ -30,7 +32,7 @@ boolean isAutobotRolledOut() {
 initAutobotPrefrefs();
 
 # Check if autumnaton is available
-if ( isAutobotRolledOut() ) {
+if ( ! isAutobotRolledOut() ) {
 
     #Check how many advs the next expedition will take
     int questsDone = to_int( get_property("_autumnatonQuests") );
@@ -59,7 +61,8 @@ if ( isAutobotRolledOut() ) {
     int remainingAdvs = my_adventures();
 
     if ( nextExpCount < remainingAdvs ) {
-        cli_execute("autumnaton send" + get_property("autobot_exp_destination"));
+        print("AUTOBOT...ROLL OUT!");
+        cli_execute("autumnaton send " + get_property("autobot_exp_destination"));
     }
 
 }
