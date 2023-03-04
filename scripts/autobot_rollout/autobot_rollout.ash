@@ -14,7 +14,7 @@ void initAutobotPrefrefs(){
 }
 
 boolean isAutobotRolledOut() {
-    print("Checking to see if Autobot has already rolled out!);
+    print("Checking to see if Autobot has already rolled out!");
     boolean isRolledOut = false;
 
     if ( item_amount( $item[autumn-aton] ) > 0 ) {
@@ -26,7 +26,7 @@ boolean isAutobotRolledOut() {
         set_property("autobot_rolled_out", true);
     }
 
-    return get_property("autobot_rolled_out");
+    return to_boolean(get_property("autobot_rolled_out"));
 }
 
 initAutobotPrefrefs();
