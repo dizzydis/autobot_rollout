@@ -13,23 +13,6 @@ void initAutobotPrefrefs(){
     }
 }
 
-string getMode() {
-    return to_string(get_property("autobot_mode"));
-}
-
-boolean getRolledOut() {
-    return isAutobotRolledOut();
-}
-
-string getDest() {
-    return to_string(get_property("autobot_aftercore_destination"));
-}
-
-void sendFallbot(string dest){
-  print("AUTOBOT...ROLL OUT!");
-  cli_execute("autumnaton send " + dest));
-}
-
 boolean isAutobotRolledOut() {
     print("Checking to see if Autobot has already rolled out!");
     boolean isRolledOut = false;
@@ -46,6 +29,22 @@ boolean isAutobotRolledOut() {
     return to_boolean(get_property("autobot_rolled_out"));
 }
 
+string getMode() {
+    return to_string(get_property("autobot_mode"));
+}
+
+boolean getRolledOut() {
+    return isAutobotRolledOut();
+}
+
+string getDest() {
+    return to_string(get_property("autobot_aftercore_destination"));
+}
+
+void sendFallbot(string dest){
+  print("AUTOBOT...ROLL OUT!");
+  cli_execute("autumnaton send " + dest);
+}
 
 int nextExpeditionAdvCount() {
 
