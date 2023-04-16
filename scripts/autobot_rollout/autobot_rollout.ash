@@ -110,7 +110,7 @@ if ( getMode() == "aftercore" ) {
     int nextExpCount = nextExpeditionAdvCount();
     int remainingAdvs = my_adventures();
 
-    if ( nextExpCount < (remainingAdvs + 11) {
+    if ( nextExpCount < (remainingAdvs + 11) ) {
       sendFallbot(to_string(get_property("autobot_aftercore_destination")));
     }
   }
@@ -124,7 +124,7 @@ boolean autobotNeedsNextUpgrade() {
 
 void embarkForNextUpgrade(){
   #Defining this so it won't error
-  print("This doesn't do anything right now... double check Autobot goes somewhere!...also how did we get here?);
+  print("This doesn't do anything right now... double check Autobot goes somewhere!...also how did we get here?");
 }
 
 
