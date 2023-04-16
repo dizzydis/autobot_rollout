@@ -25,9 +25,9 @@ string getDest() {
     return to_string(get_property("autobot_aftercore_destination"));
 }
 
-void sendFallbot(string location){
+void sendFallbot(string dest){
   print("AUTOBOT...ROLL OUT!");
-  cli_execute("autumnaton send " + location));
+  cli_execute("autumnaton send " + dest));
 }
 
 boolean isAutobotRolledOut() {
